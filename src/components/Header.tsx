@@ -1,6 +1,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { LogOut } from 'lucide-react';
+import escudoImg from '../assets/escudo.png';
 
 export default function Header({ setAuth }: { setAuth: (status: boolean) => void }) {
   const navigate = useNavigate();
@@ -16,7 +17,7 @@ export default function Header({ setAuth }: { setAuth: (status: boolean) => void
     <header className="bg-white border-b border-gray-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
         <div className="flex items-center gap-2 sm:gap-3">
-          <img src="../assets/escudo.png" alt="Escudo de Bolivia" className="w-6 h-6 sm:w-8 sm:h-8 object-contain" />
+          <img src={escudoImg} alt="Escudo de Bolivia" className="w-6 h-6 sm:w-8 sm:h-8 object-contain" />
           <div className="leading-tight">
             <h1 className="text-base sm:text-lg font-bold text-[#1a2b4c] tracking-tight">
               Sistema de Planillas

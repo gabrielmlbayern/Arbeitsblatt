@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { CONFIG } from '../config';
+import escudoImg from '../assets/escudo.png';
+import plazaImg from '../assets/plaza.png';
 
 export default function Login({ setAuth }: { setAuth: (status: boolean) => void }) {
   const [password, setPassword] = useState('');
@@ -29,7 +31,7 @@ export default function Login({ setAuth }: { setAuth: (status: boolean) => void 
       <div 
         className="absolute inset-0 bg-cover bg-center"
         style={{ 
-          backgroundImage: `url('../assets/plaza.png')`, 
+          backgroundImage: `url(${plazaImg})`, 
           filter: 'blur(10px) brightness(0.6)' 
         }}
       ></div>
@@ -43,7 +45,7 @@ export default function Login({ setAuth }: { setAuth: (status: boolean) => void 
           <div className="h-full w-1/3 bg-[#007a33]"></div>
         </div>
 
-        <img src="../assets/escudo.png" alt="Escudo de Bolivia" className="w-16 h-16 object-contain mt-4" />
+        <img src={escudoImg} alt="Escudo de Bolivia" className="w-16 h-16 object-contain mt-4" />
 
         <h1 className="text-2xl font-bold mt-4 text-[#1a2b4c]">Sistema de Planillas</h1>
         <p className="text-gray-500 font-semibold tracking-widest text-xs mt-2 uppercase text-center mb-8">
